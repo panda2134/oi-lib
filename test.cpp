@@ -3,8 +3,11 @@
 using namespace std;
 int main(){
     int a,b;
-    cin>>a>>b;
-    cout<<gcd(a,b)<<endl;
+    double da,db;
+    cin>>a>>b>>da>>db;
+    swapnum(a,b);
+    swapnum(da,db);
+    cout<<a<<' '<<b<<' '<<gcd(a,b)<<' '<<da<<' '<<db<<endl;
     return 0;
 }
 

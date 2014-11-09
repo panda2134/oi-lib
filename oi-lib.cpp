@@ -1,6 +1,3 @@
-#ifdef DEBUG
-#include<iostream>
-#endif
 bool isprime(int n)
 {
     if(n==0||n==1)
@@ -35,7 +32,7 @@ int gcd(int a,int b)
 {
 	int r;
 	if(a<b)
-		swapint(a,b);
+		swapnum(a,b);
 	r=b;
 	while(r)
 	{
