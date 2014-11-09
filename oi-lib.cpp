@@ -1,4 +1,5 @@
-bool isprime(int n)
+#include "oi-lib.h"
+bool OIlib::isprime(int n)
 {
     if(n==0||n==1)
         return false;
@@ -7,28 +8,28 @@ bool isprime(int n)
             return false;
     return true;
 }
-bool odd(int n)
+bool OIlib::odd(int n)
 {
 	return n%2; 
 }
-bool even(int n)
+bool OIlib::even(int n)
 {
 	return !(n%2); 
 }
-void swapnum(int & a,int & b)
+void OIlib::swapnum(int & a,int & b)
 {
 	a+=b;
 	b=a-b;
 	a-=b;
 }
-void swapnum(double & a,double & b)
+void OIlib::swapnum(double & a,double & b)
 {
 	double c;
 	c=a;
 	a=b;
 	b=c;
 }
-int gcd(int a,int b)
+int OIlib::gcd(int a,int b)
 {
 	int r;
 	if(a<b)

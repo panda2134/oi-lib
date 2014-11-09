@@ -1,6 +1,7 @@
 #include<iostream>
 #include "oi-lib.h"
 using namespace std;
+using namespace OIlib;
 int main(){
     int a,b;
     double da,db;
