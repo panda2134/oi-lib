@@ -7,3 +7,11 @@ bool isprime(int n)
             return false;
     return true;
 }
+bool odd(int n)
+{
+	return n%2; 
+}
+bool even(int n)
+{
+	return !(n%2); 
+} 
