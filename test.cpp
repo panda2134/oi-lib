@@ -1,10 +1,10 @@
 #include<iostream>
-#include "oi-lib"
+#include "oi-lib.h"
 using namespace std;
 int main(){
-    int n;
-    cin>>n;
-    cout<<odd(n)<<' '<<even(n)<<endl;
+    int a,b;
+    cin>>a>>b;
+    cout<<gcd(a,b)<<endl;
     return 0;
 }
 
