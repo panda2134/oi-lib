@@ -1,6 +1,7 @@
 #ifndef _OILIB_H
 #define _OILIB_H 
-void swapint(int &,int &);
+void swapnum(int &,int &);
+void swapnum(double &,double &);
 bool isprime(int);
 bool odd(int);
 bool even(int);

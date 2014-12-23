@@ -18,11 +18,18 @@ bool even(int n)
 {
 	return !(n%2); 
 }
-void swapint(int & a,int & b)
+void swapnum(int & a,int & b)
 {
 	a+=b;
 	b=a-b;
 	a-=b;
+}
+void swapnum(double & a,double & b)
+{
+	double c;
+	c=a;
+	a=b;
+	b=c;
 }
 int gcd(int a,int b)
 {
