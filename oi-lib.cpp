@@ -1,4 +1,5 @@
 #include "oi-lib.h"
+#include <string>
 bool OIlib::isprime(int n)
 {
     if(n==0||n==1)
@@ -42,4 +43,52 @@ int OIlib::gcd(int a,int b)
 	    b=r;
 	}
 	return a;
+}
+Node* OIlib::Node::getNext(){
+	return this->next;
+}
+void OIlib::Node::setNext(Node* n){
+	this->next=n;
+}
+void OIlib::Node::setValue(string v){
+	this->val=v;
+}
+string OIlib::Node::getValue(){
+	return val;
+}
+void OIlib::Node::ins(string value){
+	Node *n=this->getNext();
+	Node *toInsert=new Node();
+	this->next=toInsert;
+	this->next->next=n;
+	this->next->val=value;
+}
+OIlib::NodeList::NodeList(){
+	head=new Node();
+	head->setNext(NULL);
+	cur=head;
+}
+OIlib::NodeList::~NodeList(){
+	Node *f,*n;
+	f=this->head;
+	while(f->getNext()!=NULL){
+		n=f->getNext();
+		delete f;
+		f=n;
+	}
+}
+Node* OIlib::NodeList::getHead(){
+	return this->head;
+}
+Node* OIlib::NodeList::getCur(){
+	return this->cur;
+}
+void OIlib::NodeList::goNext(){
+	this->cur=this->cur->getNext();
+}
+void OIlib::NodeList::ins(string value){
+	cur->ins(value);
+}
+void OIlib::NodeList::rewind(){
+	cur=head;
 }
